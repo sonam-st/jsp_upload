@@ -34,9 +34,7 @@ public class UploadServlet extends HttpServlet {
 			upload.setSizeMax(MAX_REQUEST_SIZE);
 			String uploadPath = getServletContext().getRealPath("") + File.separator + UPLOAD_DIRECTORY;
 			File uploadDir = new File(uploadPath);
-			if (!uploadDir.exists()) {
-				uploadDir.mkdir();
-			}
+			if (!uploadDir.exists()) uploadDir.mkdir();
 
 			try {
 				List<FileItem> formItems = upload.parseRequest(request);

@@ -7,6 +7,7 @@
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+
   <servlet>
     <servlet-name>UploadServlet</servlet-name>
     <servlet-class>com.baeldung.jspupload.UploadServlet</servlet-class>
@@ -14,5 +15,14 @@
   <servlet-mapping>
     <servlet-name>UploadServlet</servlet-name>
     <url-pattern>/uploadFile</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>MultiPartServlet</servlet-name>
+    <servlet-class>com.baeldung.jspupload.MultipartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MultiPartServlet</servlet-name>
+    <url-pattern>/multiPartServlet</url-pattern>
   </servlet-mapping>
 </web-app>
